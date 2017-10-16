@@ -1,0 +1,7 @@
+number = input("Enter A Number ")
+
+length = len(number)
+x = 0
+while(x < length):
+	print(x)
+	x = x + 1
