@@ -1,17 +1,45 @@
-palindromes = []
 
-for number in range(100,10000):
-	strnumber = str(number)
+lowernumber = input("")
+highernumber = input("")
+lowernumber = int(lowernumber)
+highernumber = int(highernumber)
+
+
+def palindrome(lowernumber, highernumber):
+	palindromelist = []
+	for number in range(lowernumber, highernumber + 1):
+		x = 1
+		number = str(number)
+		while x <(len(number)):
+			test = number[len(number) - x]
+			print(test, number[x])
+			x += 1          
+			if test[0] == number[0]:
+				palindromelist.append(number)
+				print(palindromelist)
+	return test
+		
 	
-	if len(strnumber) == 3:
-		if strnumber[0] == strnumber[2]:
-			if (int(strnumber[0])%2) == 0 and (int(strnumber[1])%2) == 0 and (int(strnumber[2])%2) == 0:
-				palindromes.append(strnumber)
-	
-	elif len(strnumber) == 4:
-		if strnumber[0] == strnumber[3]:
-			if (int(strnumber[0])%2) == 0 and (int(strnumber[1])%2) == 0 and (int(strnumber[2])%2) == 0 and (int(strnumber[3])%2) == 0 and int(strnumber[1]) == int(strnumber[2]):
-				palindromes.append(strnumber)
+palindrome(lowernumber, highernumber)
 	
 	
-print(palindromes)
+	
+'''
+	msg = input("Enter")
+	begin = 0
+	end = -1
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	while x < (len(msg)+1):
+		fmsg = msg[len(msg) - x]
+		x += 1
+		print(fmsg)
+		'''

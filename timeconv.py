@@ -1,7 +1,12 @@
 seconds = input("Enter Time in Seconds")
 
-seconds = float(seconds)
-minutes = (seconds)/60
-hours = (minutes)/60
+hour = int(seconds)/3600
+calcminute = int(seconds)%3600
+finalhour = int(hour)
 
-print(str(seconds) + " Seconds,", str(minutes) + " Minutes,", "and", str(hours) + " Hours")
+minute = (calcminute)/60
+second = (calcminute)%60
+finalminute = int(minute)
+
+print(finalhour, "hours", finalminute, "minutes", second, "seconds")
+
